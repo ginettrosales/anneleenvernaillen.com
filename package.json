@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "nodemon --watch ../../dist/index.js -x \"cross-env DEBUG=vite-plugin-windicss:* vite\"",
+    "build": "vue-tsc --noEmit && vite-ssg build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -16,13 +16,28 @@
     "@antfu/eslint-config": "^0.26.1",
     "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/tsconfig": "^0.1.3",
+    "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^0.7.9",
+    "cross-env": "^7.0.3",
+    "gray-matter": "^4.0.3",
+    "markdown-it-anchor": "^8.6.4",
+    "markdown-it-link-attributes": "^4.0.1",
+    "markdown-it-prism": "^2.2.4",
+    "nodemon": "^2.0.19",
     "typescript": "^4.7.4",
+    "unplugin-auto-import": "^0.11.1",
+    "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.7",
     "vite-plugin-pages": "^0.25.0",
     "vite-plugin-pages-sitemap": "^1.3.0",
+    "vite-plugin-vue-markdown": "^0.21.1",
     "vite-plugin-windicss": "^1.8.7",
+    "vite-ssg": "^0.20.2",
     "vue-tsc": "^0.40.1",
     "windicss": "^3.5.6"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
   }
 }

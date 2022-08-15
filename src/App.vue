@@ -1,14 +1,13 @@
 <script setup lang="ts">
+import HeaderComponent from "./components/HeaderComponent.vue";
 
 </script>
 
 <template>
-  <h2>
-    Anneleen Vernaillen
-  </h2>
-  <h4>
-    VISUAL ARTIST
-  </h4>
+  <HeaderComponent />
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <style scoped>
