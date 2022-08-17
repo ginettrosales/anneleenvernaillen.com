@@ -52,12 +52,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container mx-auto pt-8 my-20">
+  <img v-if="frontmatter.header_img" :src="frontmatter.header_img" class="animated animate-fade-in">
+  <div class="container max-w-screen-xl my-20">
     <div class="flex flex-wrap">
       <div class="w-full px-4 sm:px-6 lg:px-8 mb-10">
         <div class="prose m-auto">
-          <div class="flex flex-wrap">
-            <h1 class="animated pulse">
+          <div v-if="frontmatter.title" class="flex flex-wrap">
+            <h1>
               {{ frontmatter.title }}
             </h1>
           </div>
@@ -71,7 +72,6 @@ onMounted(() => {
               {{ frontmatter.subtitle }}
             </em>
           </div>
-          <img v-if="frontmatter.image" :src="frontmatter.image" class="rounded-md">
           <article ref="content">
             <slot />
           </article>

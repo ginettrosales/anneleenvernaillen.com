@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import { URL, fileURLToPath } from 'url'
+import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-vue-markdown'
@@ -18,7 +18,7 @@ import WindiCSS from 'vite-plugin-windicss'
 export default defineConfig({
   plugins: [
     Vue({
-      include: [/\.vue$/, /\.md$/], // <--
+      include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
       wrapperComponent: 'markdown-wrapper',
@@ -42,11 +42,11 @@ export default defineConfig({
       ],
       extensions: ['vue', 'md'],
       exclude: ['**/components/*.vue'],
-      /*onRoutesGenerated: routes =>
+      /* onRoutesGenerated: routes =>
         generateSitemap({
           hostname: 'https://anneleenvernaillen.com/',
           routes,
-        }),*/
+        }), */
       extendRoute(route) {
         const path = resolve(__dirname, route.component.slice(1))
         const md = fs.readFileSync(path, 'utf-8')
