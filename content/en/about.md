@@ -5,15 +5,15 @@ header_img: /about-header.png
 # This is me
 
 <table>
-    <tr>
-        <td>
+   <tr>
+<td class="w-[50%]">
 
 ### Celebrating creative individuality & expression.<br/>That’s what I like to stand for. Anywhere. Anytime
 
 Ever since my childhood, I’ve been drawing, painting,… creating. For me, being creative is the expression of a process, growing, moving forward. It’s the oxygen for my busy mind watching, observing and learning.
 
 </td>
-<td>
+<td class="w-[50%]">
 
 Finding peace of mind, I do in nature. Starting the day walking or jogging through the fields, that’s when I reload. But after a period of peace and calm, I am convinced, we also have the need to push our bounderies from time to time.
 

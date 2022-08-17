@@ -14,17 +14,17 @@ const navbarCollapseClass = computed(() => {
 </script>
 
 <template>
-  <header class="w-full flex items-center py-12">
+  <header class="w-full flex items-center py-9">
     <div class="container">
       <div class="flex justify-between relative">
         <div class="max-w-full">
           <router-link to="/">
-            <img src="@/assets/avembleem-temp.png" class="lg:pr-[68px] max-w-none">
+            <img src="@/assets/avembleem-temp.png" class="h-[100px] pr-[50px] lg:pr-[68px] max-w-none">
           </router-link>
         </div>
         <div class="max-w-full">
           <router-link to="/">
-            <div class="pt-[42px]">
+            <div class="pt-[34px]">
               <svg xmlns="http://www.w3.org/2000/svg" width="246" height="25" viewBox="0 0 246 25">
                 <text
                   id="Anneleen_Vernaillen" data-name="Anneleen Vernaillen"

@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "nodemon --watch ../../dist/index.js -x \"cross-env DEBUG=vite-plugin-windicss:* vite\"",
     "build": "vue-tsc --noEmit && vite-ssg build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:fix": "eslint . --fix",
+    "prepushtest": "rm -rf node_modules && pnpm i && pnpm run lint && pnpm run typecheck && pnpm run build"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -22,6 +26,7 @@
     "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^0.7.9",
     "cross-env": "^7.0.3",
+    "eslint": "^8.22.0",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it-anchor": "^8.6.4",

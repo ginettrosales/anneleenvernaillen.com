@@ -16,9 +16,6 @@ import { menuItems } from '@/lists/menu'
 </template>
 
 <style scoped>
-ul li a {
-  font-size: 15px;
-}
 ul li a.router-link-active {
   color: var(--text-black);
   font-weight: 500;

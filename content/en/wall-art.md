@@ -6,11 +6,11 @@ header_img: /wall-art-header.png
 
 <table>
 <tr>
-<td>
+<td class="w-[50%]">
 How much or how little must we see for our mind to register and complete an image correctly? What happens when we cross that line?
 What is reality and what is our imagination?
 </td>
-<td>
+<td class="w-[50%]">
 I observe my surroundings and capture them. Then I edit these pictures until I have created the atmosphere I have stored in my mind.
 </td>
 </tr>

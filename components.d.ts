@@ -10,7 +10,6 @@ declare module '@vue/runtime-core' {
     HeaderComponent: typeof import('./src/components/HeaderComponent.vue')['default']
     MarkdownWrapper: typeof import('./src/components/MarkdownWrapper.vue')['default']
     MenuComponent: typeof import('./src/components/MenuComponent.vue')['default']
-    NavigatieComponent: typeof import('./src/components/NavigatieComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
