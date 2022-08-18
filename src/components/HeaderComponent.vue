@@ -21,7 +21,7 @@ const navbarCollapseClass = computed(() => {
           <router-link to="/">
             <img
               src="@/assets/avembleem-temp.png"
-              class="h-[96px] pr-0 sm:pr-[36px] lg:pr-[42px] max-w-none mx-auto md:mx-0"
+              class="h-[96px] pr-0 sm:pr-[32px] lg:pr-[40px] max-w-none mx-auto md:mx-0"
             >
           </router-link>
         </div>
@@ -63,7 +63,7 @@ const navbarCollapseClass = computed(() => {
           >
             <menu-component />
           </nav>
-          <div class="absolute top-0 flex sm:relative justify-end pt-2 sm:pr-22 xl:pr-0 mr-[-10px]">
+          <div class="absolute top-0 flex sm:relative justify-end pt-2 sm:pr-20 xl:pr-0 mr-[-10px]">
             <social-icons />
           </div>
         </div>
