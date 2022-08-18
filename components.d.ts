@@ -12,5 +12,6 @@ declare module '@vue/runtime-core' {
     MenuComponent: typeof import('./src/components/MenuComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SocialIcons: typeof import('./src/components/SocialIcons.vue')['default']
   }
 }

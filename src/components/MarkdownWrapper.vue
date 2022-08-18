@@ -63,7 +63,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :style="{ 'background-color': '#eee', 'height': `${image.height}px` }">
+  <div :style="{ 'background-color': '#DCD8D1', 'height': `${image.height}px` }">
     <img v-if="frontmatter.header_img" :src="frontmatter.header_img" class="animated animate-fade-in">
   </div>
   <div class="container max-w-screen-xl my-20">

@@ -3,11 +3,11 @@ import { menuItems } from '@/lists/menu'
 </script>
 
 <template>
-  <ul class="block lg:flex border-l-dark-900 border-l-2 pl-4">
-    <li v-for="item, index in menuItems" :key="index" class="relative group">
+  <ul class="block xl:flex xl:border-l-dark-900 xl:border-l-2 pl-5">
+    <li v-for="item, index in menuItems" :key="index" class="relative group align-bottom">
       <router-link
         :to="item.url"
-        class="text-gray uppercase group-hover:text-black lg:inline-flex px-7 lg:px-1 flex mx-3"
+        class="text-gray uppercase group-hover:text-black leading-4 align-bottom flex py-2 pl-2 pr-10 xl:inline-flex xl:pl-1 xl:pr-0 xl:pt-1 xl:pb-0 xl:mx-3"
       >
         {{ item.title }}
       </router-link>

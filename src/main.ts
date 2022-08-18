@@ -6,8 +6,24 @@ import '@/css/markdown.css'
 import '@/css/main.css'
 import '@/css/prose.css'
 import { createHead } from '@vueuse/head'
+
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import App from './App.vue'
 import routes from '~pages'
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css'
+library.add(
+  faInstagram,
+  faLinkedin,
+)
+// Prevent fontawesome from adding its CSS since we did it manually above:
+config.autoAddCss = false
 
 const scrollBehavior = (
   _to: unknown,
@@ -22,4 +38,5 @@ const head = createHead({
 
 export const createApp = ViteSSG(App, { routes, scrollBehavior }, ({ app }) => {
   app.use(head)
+  app.component('FontAwesomeIcon', FontAwesomeIcon)
 })
