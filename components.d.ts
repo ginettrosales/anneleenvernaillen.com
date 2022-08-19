@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     HeaderComponent: typeof import('./src/components/HeaderComponent.vue')['default']
+    HeaderImage: typeof import('./src/components/HeaderImage.vue')['default']
     MarkdownWrapper: typeof import('./src/components/MarkdownWrapper.vue')['default']
     MenuComponent: typeof import('./src/components/MenuComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -6,19 +6,9 @@ defineProps({
   },
 })
 
-const calculateImageHeight = (screenWidth: number) => {
-  return screenWidth * 420 / 1920
-}
-const image = reactive({
-  height: calculateImageHeight(window.innerWidth),
-})
-
 const router = useRouter()
 const content = ref<HTMLDivElement>()
 onMounted(() => {
-  window.onresize = () => {
-    image.height = calculateImageHeight(window.innerWidth)
-  }
   const navigate = () => {
     if (location.hash) {
       document.querySelector(decodeURIComponent(location.hash))
@@ -63,9 +53,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :style="{ 'background-color': '#DCD8D1', 'height': `${image.height}px` }">
-    <img v-if="frontmatter.header_img" :src="frontmatter.header_img" class="animated animate-fade-in">
-  </div>
+  <header-image :url="frontmatter.header_img" />
   <div class="container max-w-screen-xl my-20">
     <div class="flex flex-wrap">
       <div class="w-full px-4 sm:px-6 lg:px-8 mb-10">
