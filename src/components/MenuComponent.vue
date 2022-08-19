@@ -7,7 +7,7 @@ import { menuItems } from '@/lists/menu'
     <li v-for="item, index in menuItems" :key="index" class="relative group align-bottom">
       <router-link
         :to="item.url"
-        class="text-gray uppercase group-hover:text-black leading-4 align-bottom flex py-2 pl-2 pr-10 xl:inline-flex xl:pl-1 xl:pr-0 xl:pt-1 xl:pb-0 xl:mx-3"
+        class="text-gray uppercase  overflow-hidden leading-4 align-bottom flex py-2 pl-2 pr-10 xl:inline-flex xl:pl-1 xl:pr-0 xl:pt-1 xl:pb-0 xl:mx-3"
       >
         {{ item.title }}
       </router-link>
@@ -16,8 +16,8 @@ import { menuItems } from '@/lists/menu'
 </template>
 
 <style scoped>
-ul li a.router-link-active {
-  color: var(--text-black);
-  font-weight: 500;
+a:hover,
+a.router-link-active {
+  text-shadow: -0.05ex 0 currentColor, 0.05ex 0 currentColor;
 }
 </style>
