@@ -5,6 +5,7 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Markdown from 'vite-plugin-vue-markdown'
 import LinkAttributes from 'markdown-it-link-attributes'
+import MarkdownItContainer from 'markdown-it-container'
 import Anchor from 'markdown-it-anchor'
 import Prism from 'markdown-it-prism'
 // import generateSitemap from 'vite-plugin-pages-sitemap'
@@ -30,6 +31,39 @@ export default defineConfig({
           attrs: {
             target: '_blank',
             rel: 'noopener',
+          },
+        })
+        md.use(MarkdownItContainer, 'col-left', {
+          validate(params) {
+            return params.trim().match(/^col-left$/)
+          },
+          render(tokens, idx) {
+            if (tokens[idx].nesting === 1)
+              return '<div class=\"col-left\">\n'
+            else
+              return '\n</div>\n'
+          },
+        })
+        md.use(MarkdownItContainer, 'col-right', {
+          validate(params) {
+            return params.trim().match(/^col-right$/)
+          },
+          render(tokens, idx) {
+            if (tokens[idx].nesting === 1)
+              return '<div class=\"col-right\">\n'
+            else
+              return '\n</div>\n'
+          },
+        })
+        md.use(MarkdownItContainer, 'col-end', {
+          validate(params) {
+            return params.trim().match(/^col-end\s+(.*)$/)
+          },
+          render(tokens, idx) {
+            if (tokens[idx].nesting === 1)
+              return '<div class=\"col-clear\">'
+            else
+              return '</div>'
           },
         })
       },

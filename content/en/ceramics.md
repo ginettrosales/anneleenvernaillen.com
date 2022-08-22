@@ -4,16 +4,17 @@ header_img: /ceramics-header.png
 
 # Ceramics
 
-<table>
-<tr>
-<td class="w-[50%]">
+::: col-left
+
 The behavior of clay - and porcelain in particular - on a wheel fascinates me beyond words. This craftmanship requires concentration, practice and focus, but the tranquility it brings… so zen. From my first contact with clay my focus has been on the form.
-</td>
-<td class="w-[50%]">
+
+:::
+::: col-right
+
 The tension in the form created by turning remains even when I consciously start to distort. A wonderful thing to explore… Combined with my own photographic interpretations, I have found my own voice.
-</td>
-</tr>
-</table>
+
+:::
+::: col-end :::
 
 ## Sculptural objects
 

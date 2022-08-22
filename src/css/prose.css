@@ -272,6 +272,26 @@
 .prose em {
   color: inherit;
 }
+
+// custom css classes for handling columns in markdown, in combination with markdown-it-container
+@media (min-width: 640px) {
+  .prose .col-left,
+  .prose .col-right {
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+  }
+  .prose .col-left {
+    padding-right: 20px;
+  }
+  .prose .col-right {
+    padding-left: 20px;
+  }
+  .prose .col-clear {
+    clear: left;
+  }
+}
+
 .prose-sm {
   font-size: 0.875rem;
   line-height: 1.7142857;
@@ -451,3 +471,4 @@
 .prose-sm > :last-child {
   margin-bottom: 0;
 }
+
