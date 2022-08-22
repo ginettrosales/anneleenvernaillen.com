@@ -29,7 +29,7 @@ const navbarCollapseClass = computed(() => {
           <router-link to="/">
             <div class="pt-[33px]">
               <svg
-                xmlns="http: www.w3.org/2000/svg" class="mx-auto sm:mx-0 sm:w-[200px]" width="246" height="25"
+                class="mx-auto sm:mx-0 sm:w-[200px]" width="246" height="25"
                 viewBox="0 0 246 25"
               >
                 <text
