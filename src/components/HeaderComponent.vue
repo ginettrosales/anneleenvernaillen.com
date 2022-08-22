@@ -2,7 +2,7 @@
 const navbar = reactive({
   show: false,
 })
-function toggleNavbar() {
+function navbarToggler() {
   navbar.show = !navbar.show
 }
 const navbarTogglerClass = computed(() => {
@@ -49,7 +49,7 @@ const navbarCollapseClass = computed(() => {
           <button
             id="navbarToggler"
             class="block absolute cursor-pointer translate-y-[-50%] xl:hidden left-0 top-0 sm:top-8 sm:left-auto sm:right-0 px-3 py-[6px] rounded-lg z-30"
-            :class="navbarTogglerClass" @click="toggleNavbar"
+            :class="navbarTogglerClass" @click="navbarToggler"
           >
             <span class="relative w-[30px] h-[2px] my-[6px] block bg-black transition" />
             <span class="relative w-[30px] h-[2px] my-[6px] block bg-black transition" />
@@ -61,7 +61,7 @@ const navbarCollapseClass = computed(() => {
             class="absolute left-0 top-10 sm:top-20 sm:left-auto sm:right-0 z-20 flex justify-end py-5 pr-2 bg-[#FFFEFD] shadow-lg max-w-[250px] xl:bg-transparent xl:py-0 xl:max-w-full xl:block xl:static xl:shadow-none"
             :class="navbarCollapseClass"
           >
-            <menu-component />
+            <menu-component @hide-nav="navbar.show = false" />
           </nav>
           <div class="absolute top-0 flex sm:relative justify-end pt-2 sm:pr-20 xl:pr-0 mr-[-10px]">
             <social-icons />

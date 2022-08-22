@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { menuItems } from '@/lists/menu'
+defineEmits(['hideNav'])
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import { menuItems } from '@/lists/menu'
       <router-link
         :to="item.url"
         class="text-gray uppercase  overflow-hidden leading-4 align-bottom flex py-2 pl-2 pr-10 xl:inline-flex xl:pl-1 xl:pr-0 xl:pt-1 xl:pb-0 xl:mx-3"
+        @click="$emit('hideNav')"
       >
         {{ item.title }}
       </router-link>

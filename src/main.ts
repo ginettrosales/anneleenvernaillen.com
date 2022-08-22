@@ -6,6 +6,7 @@ import '@/css/markdown.css'
 import '@/css/main.css'
 import '@/css/prose.css'
 import { createHead } from '@vueuse/head'
+import NProgress from 'nprogress'
 
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -36,7 +37,16 @@ const head = createHead({
   titleTemplate: '%s | Anneleen Vernaillen',
 })
 
-export const createApp = ViteSSG(App, { routes, scrollBehavior }, ({ app }) => {
+export const createApp = ViteSSG(App, { routes, scrollBehavior }, ({ app, isClient, router }) => {
+  if (isClient) {
+    router.beforeEach((to, from) => {
+      if (to.path !== from.path)
+        NProgress.start()
+    })
+    router.afterEach(() => {
+      NProgress.done()
+    })
+  }
   app.use(head)
   app.component('FontAwesomeIcon', FontAwesomeIcon)
 })

@@ -1,8 +1,8 @@
 {
   "name": "anneleenvernaillen.com",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "nodemon --watch ../../dist/index.js -x \"cross-env DEBUG=vite-plugin-windicss:options vite\"",
     "build": "vue-tsc --noEmit && vite-ssg build",
@@ -17,6 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "animate.css": "^4.1.1",
+    "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.4",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"

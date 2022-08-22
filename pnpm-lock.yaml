@@ -21,6 +21,7 @@ specifiers:
   markdown-it-link-attributes: ^4.0.1
   markdown-it-prism: ^2.2.4
   nodemon: ^2.0.19
+  nprogress: ^0.2.0
   prism-theme-vars: ^0.2.4
   typescript: ^4.7.4
   unplugin-auto-import: ^0.11.2
@@ -41,6 +42,7 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.2
   '@fortawesome/vue-fontawesome': 3.0.1_sqiqa7hvpgqdakjrbqzbqxvzme
   animate.css: 4.1.1
+  nprogress: 0.2.0
   prism-theme-vars: 0.2.4
   vue: 3.2.37
   vue-router: 4.1.3_vue@3.2.37
@@ -3004,6 +3006,10 @@ packages:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /nth-check/2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
