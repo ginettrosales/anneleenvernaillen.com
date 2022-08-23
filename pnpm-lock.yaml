@@ -2,9 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': 0.26.1
-  '@fortawesome/fontawesome-svg-core': ^6.1.2
-  '@fortawesome/free-brands-svg-icons': ^6.1.2
-  '@fortawesome/vue-fontawesome': ^3.0.1
+  '@fortawesome/fontawesome-svg-core': 6.1.2
+  '@fortawesome/free-brands-svg-icons': 6.1.2
+  '@fortawesome/vue-fontawesome': 3.0.1
   '@intlify/vite-plugin-vue-i18n': 6.0.1
   '@types/markdown-it': 12.2.3
   '@types/node': 18.7.11
