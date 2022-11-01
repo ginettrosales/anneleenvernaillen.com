@@ -19,7 +19,7 @@ jobs:
       - name: Install npm dependencies
         run: npm install
       - name: Run tests and coverage
-        run: vitest run --coverage
+        run: npm run coverage
       - name: Analyze with SonarCloud
         uses: sonarsource/sonarcloud-github-action@master
         env:
