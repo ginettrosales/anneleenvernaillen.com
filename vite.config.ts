@@ -14,6 +14,9 @@ import matter from 'gray-matter'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import WindiCSS from 'vite-plugin-windicss'
+import { configDefaults } from 'vitest/config'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { ViteSSGOptions } from 'vite-ssg'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -104,6 +107,16 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  test: {
+    environment: 'jsdom',
+    exclude: [...configDefaults.exclude],
+    coverage: {
+      reporter: ['text', 'lcov'],
+      all: true,
+      include: ['src/**/*.vue'],
+    },
+    globals: true,
   },
   ssgOptions: {
     script: 'async',
