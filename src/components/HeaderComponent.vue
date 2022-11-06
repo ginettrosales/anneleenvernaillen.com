@@ -11,6 +11,9 @@ const navbarTogglerClass = computed(() => {
 const navbarCollapseClass = computed(() => {
   return navbar.show ? '' : 'hidden'
 })
+const navbarCollapse = computed(() => {
+  return navbar.show ? '' : 'hidden'
+})
 </script>
 
 <template>
