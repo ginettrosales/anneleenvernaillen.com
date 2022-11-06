@@ -29,4 +29,8 @@ export const menuItems: MenuItem[] = [
     title: 'Contact',
     url: '/contact',
   },
+    {
+    title: 'New value',
+    url: '/new',
+  },
 ]
