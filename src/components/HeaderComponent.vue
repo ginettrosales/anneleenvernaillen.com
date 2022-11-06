@@ -26,6 +26,7 @@ const navbarCollapseClass = computed(() => {
           </router-link>
         </div>
         <div class="max-w-full">
+        <div>New code for test</div>
           <router-link to="/">
             <div class="pt-[33px]">
               <svg
