@@ -76,6 +76,9 @@ onMounted(() => {
           <article ref="content">
             <slot />
           </article>
+                    <article ref="content">
+            <slot />
+          </article>
         </div>
       </div>
     </div>
