@@ -47,19 +47,15 @@ html.ud-dark .prose {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+  --fg: #ccc;
+  --fg-deep: #fff;
+  --fg-deeper: #BFAC22;
 }
 
 .prose {
   --fg: #222;
   --fg-deep: #222;
   --fg-deeper: #707070;
-
-  color: var(--fg);
-}
-html.ud-dark .prose {
-  --fg: #ccc;
-  --fg-deep: #fff;
-  --fg-deeper: #BFAC22;
 
   color: var(--fg);
 }
